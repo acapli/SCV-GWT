@@ -1,0 +1,2 @@
+serviceClass: py.smtr.web.client.service.ProveedorService
+path: D3E3405219416456337A797DC35D95D9.gwt.rpc

@@ -1,0 +1,2 @@
+serviceClass: py.smtr.web.client.service.ListadoPagosService
+path: DF79D60643D1AC38F24F99D27FF9972B.gwt.rpc

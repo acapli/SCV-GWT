@@ -1,0 +1,2 @@
+serviceClass: py.smtr.web.client.service.FacturaService
+path: 486ED37882F15ACD8802062E859C94D2.gwt.rpc

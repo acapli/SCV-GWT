@@ -1,0 +1,2 @@
+serviceClass: py.smtr.web.client.service.CompraService
+path: C5F04FD0360557F3ED50114E7C5C6D6C.gwt.rpc

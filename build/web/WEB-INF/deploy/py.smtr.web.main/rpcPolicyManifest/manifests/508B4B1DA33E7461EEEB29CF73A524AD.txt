@@ -1,0 +1,2 @@
+serviceClass: py.smtr.web.client.service.VentaService
+path: B95B3A1ED6E2BB3036BDCB5F4A48A3FA.gwt.rpc

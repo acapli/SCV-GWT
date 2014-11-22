@@ -1,0 +1,2 @@
+serviceClass: py.smtr.web.client.service.ClienteService
+path: 656163EC3793D98E6CAE7BDA4B3152A1.gwt.rpc

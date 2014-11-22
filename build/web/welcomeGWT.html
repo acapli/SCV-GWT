@@ -1,0 +1,60 @@
+<!doctype html>
+<!--
+The DOCTYPE declaration above will set the browser's rendering engine into
+"Standards Mode". Replacing this declaration with a "Quirks Mode" doctype may
+lead to some differences in layout.
+-->
+
+<html>
+    <head>
+        <link rel="shortcut icon" href="images/Reloj1.jpg" media="screen" />
+        <meta name='gwt:module' content='py.smtr.web.main=py.smtr.web.main'>
+        <link rel="stylesheet" type="text/css" href="gxt/css/gxt-all.css" />
+        <title> SCVE </title>
+        <script language='javascript' src='gxt/flash/swfobject.js'></script>
+        <link type="text/css" rel="stylesheet" href="gxt/themes/slate/css/xtheme-slate.css"/>
+        <script type="text/javascript"  src="py.smtr.web.main/py.smtr.web.main.nocache.js"></script>
+    </head>
+    <body>
+         <style>
+            body {
+                background: transparent url('images/Edificio3.png') no-repeat center center;
+                background-attachment: fixed;
+                background-color: #FFFFFF;
+            }
+            #loading {
+                position: absolute; 
+                left: 45%; 
+                top: 40%; 
+                padding: 4px;
+                margin-left:-45px; 
+                z-index:20001; 
+                border:2px ridge #ffffff;
+            }
+            #loading .loading-indicator {
+                background:#ffffff;
+                font:bold 13px tahoma,arial,helvetica;
+                padding:10px;
+                margin:0;
+                height:auto;
+                color:#475468;
+            }
+            #loading .loading-indicator img {
+                margin-right:8px; 
+                float:left; 
+                vertical-align:top;
+            }
+            #loading-msg {
+                font:normal 10px arial,tahoma,sans-serif;
+            }
+        </style>
+        <div id="loading">
+            <div class="loading-indicator">
+                <img src="images/lightbox-ico-loading.gif"/>
+                SCVE<br />
+                <span id="loading-msg">Cargando aplicaci&oacute;n...</span>
+            </div>
+        </div>
+        <iframe src="javascript:''" id="__gwt_historyFrame" style="width:0;height:0;border:0"></iframe>
+    </body>
+</html>

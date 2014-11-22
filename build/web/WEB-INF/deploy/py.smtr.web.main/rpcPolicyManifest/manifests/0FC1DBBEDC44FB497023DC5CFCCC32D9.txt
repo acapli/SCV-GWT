@@ -1,0 +1,2 @@
+serviceClass: py.smtr.web.client.service.ProductoService
+path: E0218E4969A1487928A57259A9649E51.gwt.rpc

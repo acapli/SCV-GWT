@@ -1,0 +1,2 @@
+serviceClass: py.smtr.web.client.service.CajaService
+path: 3BD1B09C0A0222D76D1410E40F1E5685.gwt.rpc

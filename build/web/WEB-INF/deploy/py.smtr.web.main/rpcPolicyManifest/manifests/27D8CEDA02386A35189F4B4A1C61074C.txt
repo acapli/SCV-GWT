@@ -1,0 +1,2 @@
+serviceClass: py.smtr.web.client.service.PagoService
+path: 1AD70D30D3590903001D6962E4588B7C.gwt.rpc

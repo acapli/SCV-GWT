@@ -1,0 +1,12 @@
+# Module py.smtr.web.main
+# RPC service class, partial path of RPC policy file
+py.smtr.web.client.service.CompraService, C5F04FD0360557F3ED50114E7C5C6D6C.gwt.rpc
+py.smtr.web.client.service.ProductoService, E0218E4969A1487928A57259A9649E51.gwt.rpc
+py.smtr.web.client.service.PagoService, 1AD70D30D3590903001D6962E4588B7C.gwt.rpc
+py.smtr.web.client.service.UsuarioService, 925104F4AD1D9E93B3F953D18DE83499.gwt.rpc
+py.smtr.web.client.service.VentaService, B95B3A1ED6E2BB3036BDCB5F4A48A3FA.gwt.rpc
+py.smtr.web.client.service.CajaService, 3BD1B09C0A0222D76D1410E40F1E5685.gwt.rpc
+py.smtr.web.client.service.ListadoPagosService, DF79D60643D1AC38F24F99D27FF9972B.gwt.rpc
+py.smtr.web.client.service.FacturaService, 486ED37882F15ACD8802062E859C94D2.gwt.rpc
+py.smtr.web.client.service.ProveedorService, D3E3405219416456337A797DC35D95D9.gwt.rpc
+py.smtr.web.client.service.ClienteService, 656163EC3793D98E6CAE7BDA4B3152A1.gwt.rpc
