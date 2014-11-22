@@ -230,6 +230,9 @@ public class UsuarioServiceImpl extends RemoteServiceServlet implements UsuarioS
     
      @Override
     public void actualizarRolesUsuario(Integer idUsuario, Boolean roles[]){
+        
+        logger.info("----Accedió actualizarRolesUsuario de UsuarioServiceImpl----");
+        
         HttpServletRequest request = this.getThreadLocalRequest();
         HttpSession session = request.getSession();
         String sesion = (String) session.getAttribute("sesion");

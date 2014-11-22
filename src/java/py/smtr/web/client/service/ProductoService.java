@@ -17,7 +17,7 @@ import py.smtr.web.shared.WARException;
 
 /**
  *
- * @author IDTK
+ * @author 
  */
 @RemoteServiceRelativePath("service/productoservice")
 public interface ProductoService extends RemoteService {

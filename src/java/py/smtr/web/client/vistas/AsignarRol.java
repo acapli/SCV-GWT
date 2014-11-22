@@ -31,7 +31,7 @@ public class AsignarRol extends Window {
     //roles        
     private CheckBox roles[];      //4 roles 0 = Administrador, 1 = Comprador,, 2 = Vendedor, 3 = Cajero
     private String nombreRoles[] = {"Administrador", "Operador", "Vendedor", "Cajero"};
-    private Integer valoresRoles[] = {ConstantesWAR.ROL_ADMINISTRADOR, ConstantesWAR.ROL_OPERADOR, ConstantesWAR.ROL_VENDEDOR, ConstantesWAR.ROL_CAJERO};     
+    private Integer valoresRoles[] = {ConstantesWAR.ROL_ADMINISTRADOR, ConstantesWAR.ROL_COMPRADOR, ConstantesWAR.ROL_VENDEDOR, ConstantesWAR.ROL_CAJERO};     
     private FormPanel form;
     private Button guardar;
     private Button cancelar;

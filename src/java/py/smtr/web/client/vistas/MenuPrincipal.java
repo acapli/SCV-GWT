@@ -98,51 +98,55 @@ public class MenuPrincipal extends Viewport {
         Viewport westPanel = new Viewport();
         
         westPanel.setLayout(new FitLayout());
-        westPanel.add(UsuariosTree.ususariosTree());
-        westPanel.add(ClientesTree.clientesTree());
-        westPanel.add(ProveedoresTree.proveedoresTree());      
-        westPanel.add(VentasTree.ventasTree());
-        westPanel.add(ProductosTree.productosTree());
-        westPanel.add(ComprasTree.comprasTree());
-        westPanel.add(CajasTree.cajasTree());
-        westPanel.add(PagosTree.pagosTree());
-        westPanel.add(ListadoPagosTree.listadopagosTree());
-        westPanel.add(PasswordTree.passwordTree());
-        westPanel.add(SalirTree.salirTree());    
-        west.add(westPanel);                           //todos pueden salir del sistema...jaja
+       // westPanel.add(UsuariosTree.ususariosTree());
+       // westPanel.add(ClientesTree.clientesTree());
+        //westPanel.add(ProveedoresTree.proveedoresTree());      
+        //westPanel.add(VentasTree.ventasTree());
+       // westPanel.add(ProductosTree.productosTree());
+       // westPanel.add(ComprasTree.comprasTree());
+       // westPanel.add(CajasTree.cajasTree());
+       // westPanel.add(PagosTree.pagosTree());
+        //westPanel.add(ListadoPagosTree.listadopagosTree());
+       // westPanel.add(PasswordTree.passwordTree());
+       // westPanel.add(SalirTree.salirTree());    
+       // west.add(westPanel);                           //todos pueden salir del sistema...jaja
         
-        // if (roles.contains(ConstantesWAR.ROL_ADMINISTRADOR)) {
+         if (roles.contains(ConstantesWAR.ROL_ADMINISTRADOR)) {
             //se habilitan todas las funcionalidades, no importa si se tiene otro rol
-//            westPanel.setLayout(new FitLayout());
-//            westPanel.add(UsuariosTree.ususariosTree());
-//            westPanel.add(RolesTree.rolesTree());
-           // westPanel.add(CajasTree.cajasTree());
-//            westPanel.add(ClientesTree.clientesTree());
-//            westPanel.add(ProveedoresTree.proveedoresTree());
-//            westPanel.add(ProductosTree.productosTree());
-         
-//            westPanel.add(PagosTree.pagosTree());
+            westPanel.setLayout(new FitLayout());
+            westPanel.add(UsuariosTree.ususariosTree());
+          //  westPanel.add(RolesTree.rolesTree());
+              westPanel.add(CajasTree.cajasTree());
+            westPanel.add(ClientesTree.clientesTree());
+            westPanel.add(ProveedoresTree.proveedoresTree());
+            westPanel.add(ProductosTree.productosTree());
+            westPanel.add(ComprasTree.comprasTree());
+            westPanel.add(VentasTree.ventasTree());
+            westPanel.add(PagosTree.pagosTree());
+            westPanel.add(ListadoPagosTree.listadopagosTree());
 //            westPanel.add(CierreTree.cierreTree());
-   //     } else {
-//            if (roles.contains(ConstantesWAR.ROL_VENDEDOR)) {
+        } else {
+            if (roles.contains(ConstantesWAR.ROL_VENDEDOR)) {
 //                //habilitar las funcionalidades de vendedor
-          //  westPanel.add(ClientesTree.clientesTree());
-//                westPanel.add(VentasTree.ventasTree());
-//            }
+                  westPanel.add(ClientesTree.clientesTree());
+                  westPanel.add(VentasTree.ventasTree());
+            }
+            if (roles.contains(ConstantesWAR.ROL_COMPRADOR)) {
+                //habilitar las funcionalidades de comprador
+                westPanel.add(ProveedoresTree.proveedoresTree());
+                westPanel.add(ProductosTree.productosTree());
+                westPanel.add(ComprasTree.comprasTree());
+            }
 
-//            if (roles.contains(ConstantesWAR.ROL_COMPRADOR)) {
-//                //habilitar las funcionalidades de comprador
-//                westPanel.add(ProveedoresTree.proveedoresTree());
-//                westPanel.add(ProductosTree.productosTree());
-//                westPanel.add(ComprasTree.comprasTree());
-//            }
-
-//            if (roles.contains(ConstantesWAR.ROL_CAJERO)) {
-//                //habilitar las funcionalidades de cajero
-//                westPanel.add(PagosTree.pagosTree());
-//                westPanel.add(CierreTree.cierreTree());
-//            }
-      //  }
+            if (roles.contains(ConstantesWAR.ROL_CAJERO)) {
+                //habilitar las funcionalidades de cajero
+                westPanel.add(PagosTree.pagosTree());
+                //westPanel.add(CierreTree.cierreTree());
+            }
+        }
+        westPanel.add(PasswordTree.passwordTree());
+        westPanel.add(SalirTree.salirTree());           //si o si
+        west.add(westPanel);                           //todos pueden salir del sistema
         
         this.add(south, southData);
         this.add(north, northData);

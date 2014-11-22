@@ -259,6 +259,18 @@ public class ListadoProductos extends TabItem {
         porcentajeGanancia.setAllowBlank(false);
         columna.setEditor(new CellEditor(porcentajeGanancia));
         configs.add(columna);
+        
+        
+        columna = new ColumnConfig();
+        columna.setId("precio_venta");
+        columna.setHeader("Precio de Venta");
+        columna.setWidth(150);
+        NumberField venta = new NumberField();
+        columna.setEditor(new CellEditor(venta));
+        configs.add(columna);
+        
+        
+        
 
         CheckColumnConfig checkColumn = new CheckColumnConfig("activo", "Activo?", 55);
         CellEditor checkBoxEditor = new CellEditor(new CheckBox());

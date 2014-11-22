@@ -28,7 +28,7 @@ public class ConstantesWAR {
   
     //para el manejo de roles...
     public static final Integer ROL_ADMINISTRADOR  = 1;
-    public static final Integer ROL_OPERADOR  = 2;
+    public static final Integer ROL_COMPRADOR  = 2;
     public static final Integer ROL_VENDEDOR = 3;
     public static final Integer ROL_CAJERO  = 4;
    

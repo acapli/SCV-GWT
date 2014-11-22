@@ -25,7 +25,7 @@ import py.smtr.web.client.service.ClienteServiceAsync;
 
 /**
  *
- * @author Strogg
+ * @author 
  */
 public class CrearCliente extends Window {
 
@@ -135,7 +135,7 @@ public class CrearCliente extends Window {
                             // RootPanel.get("loading").setVisible(false);
                             _this.hide();
                             Info.display("Exitoso", "Se ha creado el nuevo usuario.");
-                            ListadoUsuario.loader.load();
+                            ListadoClientes.loader.load();
                         }
                     });
                 }
