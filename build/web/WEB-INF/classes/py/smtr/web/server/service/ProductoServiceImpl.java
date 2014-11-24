@@ -77,6 +77,7 @@ public class ProductoServiceImpl extends RemoteServiceServlet implements Product
             bm.set("codigo", producto.getCodigo());
             bm.set("porcentaje_ganancia", producto.getPorcentajeGanancia());
             bm.set("costo", producto.getCosto());
+            bm.set("precio_venta",producto.getCosto()+producto.getCosto()*producto.getPorcentajeGanancia()/100);
             bm.set("cantidad_existencia", producto.getCantidadExistencia());
             bm.set("activo", producto.getActivo());
             

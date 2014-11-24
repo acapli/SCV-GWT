@@ -35,6 +35,7 @@ public class CrearProducto extends Window {
     private TextField<String> codigo;
     private NumberField existencia;
     private NumberField costo;
+    private NumberField precioVenta;
     private SpinnerField porcentajeGanancia;
     private CheckBox activo;
     private Button guardar;
@@ -102,7 +103,15 @@ public class CrearProducto extends Window {
         porcentajeGanancia.setFormat(NumberFormat.getFormat("00.00"));
         porcentajeGanancia.setMinValue(0);   
         porcentajeGanancia.setEditable(true);
-        porcentajeGanancia.setMaxValue(100);   
+        porcentajeGanancia.setMaxValue(100);
+        
+        precioVenta= new NumberField();
+        precioVenta.setFieldLabel("Precio de Venta");
+        precioVenta.setEditable(false);
+        //float pVenta=costo.getValue().floatValue() + 1;// * (1+ porcentajeGanancia.getValue().floatValue()/100) ;       
+        //precioVenta.setValue(costo.getValue());
+        
+        
         
         activo = new CheckBox();
         activo.setFieldLabel("Activo");
@@ -161,6 +170,7 @@ public class CrearProducto extends Window {
         form.add(existencia);
         form.add(costo);
         form.add(porcentajeGanancia);
+        form.add(precioVenta);
         form.add(activo);
         form.addButton(guardar);
         form.addButton(cancelar);
