@@ -153,7 +153,7 @@ public class ListadoProductos extends TabItem {
                 if (listaSeleccionados.size() == 1) {                                         
                     //Integer idUsuario = 0;
                     for (BaseModel bm : listaSeleccionados) {
-                        idProducto = ((Integer) bm.get("id"));       //debe funcionar jaja
+                        idProducto = ((Integer) bm.get("id"));       
                     }
                                                                                 
                     RootPanel.get("loading").setVisible(true);               
@@ -266,7 +266,7 @@ public class ListadoProductos extends TabItem {
         columna.setHeader("Precio de Venta");
         columna.setWidth(150);
         NumberField venta = new NumberField();
-        columna.setEditor(new CellEditor(venta));
+        //columna.setEditor(new CellEditor(venta));
         configs.add(columna);
         
         

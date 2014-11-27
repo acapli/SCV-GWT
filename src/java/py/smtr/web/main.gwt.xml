@@ -3,7 +3,7 @@
   
     <module>
     <inherits name="com.google.gwt.user.User"/>
-    <set-property name="user.agent" value="gecko1_8"></set-property>
+    <!--<set-property name="user.agent" value="gecko1_8"></set-property>   Para que compile solo para firefox-->
     <inherits name='com.extjs.gxt.ui.GXT'/>
     <inherits name="py.smtr.ejb.Ejbmodule"/>
     <inherits name="com.extjs.gxt.themes.Themes"/>

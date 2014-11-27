@@ -6,6 +6,8 @@ package py.smtr.web.client.vistas;
 
 import com.extjs.gxt.ui.client.Style.HorizontalAlignment;
 import com.extjs.gxt.ui.client.event.ButtonEvent;
+import com.extjs.gxt.ui.client.event.ComponentEvent;
+import com.extjs.gxt.ui.client.event.KeyListener;
 import com.extjs.gxt.ui.client.event.SelectionListener;
 import com.extjs.gxt.ui.client.util.IconHelper;
 import com.extjs.gxt.ui.client.widget.Info;
@@ -26,7 +28,7 @@ import py.smtr.web.client.service.ProductoServiceAsync;
 
 /**
  *
- * @author Strogg
+ * @author 
  */
 public class CrearProducto extends Window {
 
@@ -45,7 +47,7 @@ public class CrearProducto extends Window {
 
     public CrearProducto() {
         _this = this;
-        this.setSize(375, 250);
+        this.setSize(375, 300);
         this.setModal(true);
         this.setBlinkModal(true);
         this.setFrame(true);
@@ -93,6 +95,18 @@ public class CrearProducto extends Window {
         costo.setAllowBlank(false);
         costo.setAllowNegative(false);
         costo.setFieldLabel("Costo");
+        costo.addKeyListener(new KeyListener() {
+
+            @Override
+            public void componentKeyPress(ComponentEvent event) {
+                if (event.getKeyCode() == 13) {
+                    //setearCampos();
+                    precioVenta.setValue(costo.getValue().floatValue()*(1+porcentajeGanancia.getValue().floatValue()/100));
+                    //Number number = numberFormat.parse("666,666.77");
+                }
+            }
+        });
+        
         
         porcentajeGanancia = new SpinnerField();
         porcentajeGanancia.setFieldLabel("% Ganancia");
@@ -104,12 +118,31 @@ public class CrearProducto extends Window {
         porcentajeGanancia.setMinValue(0);   
         porcentajeGanancia.setEditable(true);
         porcentajeGanancia.setMaxValue(100);
+        porcentajeGanancia.addKeyListener(new KeyListener() {
+            @Override
+            public void componentKeyPress(ComponentEvent event) {
+                if (event.getKeyCode() == 13) {
+                    event.getKeyCode();
+                    precioVenta.setValue(costo.getValue().floatValue()*(1+porcentajeGanancia.getValue().floatValue()/100));
+                }
+            }
+        });
         
+                
         precioVenta= new NumberField();
         precioVenta.setFieldLabel("Precio de Venta");
-        precioVenta.setEditable(false);
-        //float pVenta=costo.getValue().floatValue() + 1;// * (1+ porcentajeGanancia.getValue().floatValue()/100) ;       
-        //precioVenta.setValue(costo.getValue());
+        precioVenta.setEditable(true);
+        precioVenta.setAllowNegative(false);
+        precioVenta.addKeyListener(new KeyListener() {
+            @Override
+            public void componentKeyPress(ComponentEvent event) {
+                if (event.getKeyCode() == 13) {
+                    event.getKeyCode();
+                    //precioVenta.setValue(costo.getValue().floatValue()*(1+porcentajeGanancia.getValue().floatValue()/100));
+                    porcentajeGanancia.setValue((precioVenta.getValue().floatValue()/costo.getValue().floatValue() -1)*100);
+                }
+            }
+        });
         
         
         

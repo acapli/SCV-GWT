@@ -138,7 +138,8 @@ public class ComprasVista extends TabItem {
                             Integer id = (Integer) prod.get("id");
                             Double cantidad = (Double) prod.get("cantidad");
                             String nombre = (String) prod.get("nombre");
-                            Double costoCompra = (Double) prod.get("costo_compra");
+                            //Double costoCompra = (Double) prod.get("costo_compra");
+                            Double costoCompra = (Double) prod.get("costo");
                             Double subtotal = (Double) prod.get("total");
                             if (cantidad == null || costoCompra == null) {
                                 isComplete = false;
@@ -261,7 +262,8 @@ public class ComprasVista extends TabItem {
             public void storeUpdate(StoreEvent<BaseModel> se) {
                 Record record = se.getRecord();
                 Double cantidad = (Double) record.getModel().get("cantidad");
-                Double costoCompra = (Double) record.getModel().get("costo_compra");
+                //Double costoCompra = (Double) record.getModel().get("costo_compra");
+                Double costoCompra = (Double) record.getModel().get("costo");
                 if (cantidad != null && costoCompra != null) {
                     double d = cantidad * costoCompra;
                     NumberFormat format = NumberFormat.getFormat("#.##");
@@ -414,7 +416,8 @@ public class ComprasVista extends TabItem {
         configs.add(column);
 
         column = new ColumnConfig();
-        column.setId("costo_compra");
+        //column.setId("costo_compra");
+        column.setId("costo");
         column.setHeader("Costo Unitario");
         column.setMenuDisabled(true);
         column.setSortable(false);
@@ -476,9 +479,10 @@ public class ComprasVista extends TabItem {
 
                         @Override
                        public void onSuccess(List<BaseModel> result) {
-                            ListStore<BaseModel> detalleCompras = new ListStore<BaseModel>();
-                           detalleCompras.add(result);                           gridProductos.reconfigure(detalleCompras, createColumnProductos());
-                            produtosPanel.layout(true);
+                           ListStore<BaseModel> detalleCompras = new ListStore<BaseModel>();
+                           detalleCompras.add(result);                           
+                           gridProductos.reconfigure(detalleCompras, createColumnProductos());
+                           produtosPanel.layout(true);
                         }                    });
                 }
             });
