@@ -1,6 +1,5 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ Esto es nuevo Nora 4/12/14
  */
 package py.smtr.web.client.vistas;
 
